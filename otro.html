@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="otro.css">
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/64/64572.png" type="image/png">
+
+</head>
+<body>
+    <!-- Header del perfil -->
+    <header class="text-white text-center py-5" style="background-color: #19875425;">
+    
+        <div class="container">
+            <!-- Imagen de perfil con clic para cambiar -->
+            <img src="https://i.pinimg.com/736x/53/d1/32/53d13290a6c5288d3ac1465e7da0d90c.jpg" id="profileImage" class="rounded-circle" alt="Imagen de perfil" style="cursor: pointer; width: 150px; height: 150px;" onclick="openProfileModal()">
+            <h1 class="text-dark">Nombre</h1>
+            <p class="text-dark">Ubicación: Ciudad, pais</p>
+            <p class="text-dark">Biografía: Escrbe algo aqui...</p>
+            <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#editProfileModal">Editar Perfil</button>
+        </div>
+    </header>
+     <div style="background-color: #ffffff;">
+    <!-- Sección de contenido -->
+    <div class="container mt-5">
+        <div class="row">
+            <!-- Columna de información del perfil -->
+            <div class="col-md-4">
+                <h3 class="text-success">Información</h3>
+                <ul class="list-group">
+                    <li class="list-group-item">Edad: 25</li>
+                    <li class="list-group-item">Correo: usuario@example.com</li>
+                    <li class="list-group-item">Teléfono: 123-456-7890</li>
+                </ul>
+            </div>
+
+            <!-- Columna de comentarios -->
+            <div class="col-md-8">
+                <h3 class="text-success">Comentarios</h3>
+                <div class="mb-3">
+                    <textarea id="commentInput" class="form-control" placeholder="Escribe un comentario..." rows="3"></textarea>
+                    <button onclick="postComment()" class="btn btn-success mt-2">Publicar</button>
+                </div>
+                <ul id="commentsList" class="list-group">
+                    <li class="list-group-item">Comentario de un amigo...</li>
+                    <li class="list-group-item">Otro comentario...</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección de sugerencias de amigos -->
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h3>Amigos sugeridos</h3>
+                <ul class="list-group">
+                    <div class="friend-suggestion">
+                        <img src="https://i.pinimg.com/control/564x/ac/0e/ab/ac0eabdf41693c1a0f10e1a2eeb4248b.jpg" alt="Jeon" class="friend-img">
+                        <p>Jeon</p>  
+                    <li class="list-group-item">  <button class="btn btn-sm btn-success float-end">Agregar</button></li>
+                    </div>
+                </br>
+                    <div class="friend-suggestion">
+                        <img src="https://i.pinimg.com/control/564x/ec/cd/b8/eccdb801a65fe4e791dddb7bf89a7707.jpg" alt="Kim" class="friend-img">
+                        <p>Kim</p>
+                    <li class="list-group-item">   <button class="btn btn-sm btn-success float-end">Agregar</button></li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Modal para editar perfil y cambiar foto -->
+    <div class="modal fade" id="editProfileModal" tabindex="-1" aria-labelledby="editProfileModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="editProfileModalLabel">Editar Perfil</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="profileForm">
+                        <!-- Campos para editar nombre, ubicación y biografía -->
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="username" value="Nombre">
+                        </div>
+                        <div class="mb-3">
+                            <label for="location" class="form-label">Ubicación</label>
+                            <input type="text" class="form-control" id="location" value="Ciudad, País">
+                        </div>
+                        <div class="mb-3">
+                            <label for="bio" class="form-label">Biografía</label>
+                            <textarea class="form-control" id="bio" rows="3">Escribe algo...</textarea>
+                        </div>
+
+                        <label for="newProfileImage" class="form-label">Cambiar Foto de Perfil</label>
+                        <input type="file" id="newProfileImage" class="form-control" accept="image/*" onchange="previewImage()">
+                        <div class="mt-3">
+                            <img id="previewImage" src="" alt="Previsualización de la nueva imagen" style="width: 100px; height: 100px; display: none;">
+                        </div>
+                        <button type="button" class="btn btn-success" onclick="saveProfileChanges()">Guardar cambios</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="otro.js"></script>
+</body>
+</html>

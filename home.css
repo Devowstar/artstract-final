@@ -1,0 +1,76 @@
+body {
+    background-color: #fafafa; /* Fondo sólido */
+    margin: 0; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+video {
+    position: center;
+
+    width: 100%;
+}
+
+.section1 {
+    background-color: #ffffff;
+    border-bottom: 2px solid #ffffff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex: auto;
+}
+
+.home, .search, .foro, .categorias, .profile {
+    text-decoration: none;
+    color: #427752; /* Color verde */
+    margin-right: 10px;
+    align-items: flex-end;
+    font-size: 21px;
+}
+
+.profile {
+    margin-right: 15px;
+}
+
+.categorias {
+    font-size: 50px;
+    color: #427752; /* Color verde */
+}
+
+.containerhome {
+    align-items: flex-end;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -800px; /* Oculto inicialmente */
+    background-color: #333;
+    color: white;
+    transition: right 0.5s ease;
+    padding: 15px;
+    z-index: 1000; /* Para que esté por encima del contenido */
+}
+
+.sidebar.show {
+    right: 0; /* Cuando está visible */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+

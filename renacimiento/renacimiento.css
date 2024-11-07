@@ -1,0 +1,270 @@
+body {
+    
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.section1 {
+    background-color: #ffffff;
+    border-bottom: 2px solid #3a1212;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex: auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #262626;
+}
+
+.logo{
+    justify-content: flex-start;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.categoria{
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+
+.main-content {
+    flex: 2;
+    padding: 20px;
+}
+
+.post {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+  
+    padding: 15px;
+}
+
+#post1{
+    margin-top: -20px;
+}
+
+.post img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+
+
+.home, .search, .foro, .categorias, .profile{
+    text-decoration: none;
+    color: #427752;
+    margin-right: 10px;
+    align-items: flex-end;
+    font-size: 21px;
+    
+    
+}
+.profile{
+    margin-right: 15px;
+}
+
+.categorias{
+font-size: 50px;
+}
+
+
+.containerhome{
+    align-items: flex-end;
+}
+
+
+.publicacion {
+    
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+#publicaciones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.publicacion {
+    background-color: #fff;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Puedes ajustar el tamaño */
+    overflow: hidden;
+    transition: transform 0.2s;
+    
+}
+
+.publicacion:hover {
+    transform: scale(1.02);
+}
+
+.publicacion h2 {
+    font-size: 18px;
+    margin: 16px;
+    color: #333333;
+}
+
+.publicacion p {
+    margin: 0 16px 16px;
+    font-size: 14px;
+    color: #587e5fc9;
+}
+
+.publicacion img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.publicacion strong {
+    color: #3a1212;
+}
+
+
+.interacciones {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px;
+}
+
+.like-btn, .comment-btn, .submit-comment {
+    background-color: #4d7555;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.like-btn:hover, .comment-btn:hover, .submit-comment:hover {
+    background-color: #111111;
+}
+
+.comentarios {
+    margin: 16px;
+}
+
+textarea {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    padding: 8px;
+    resize: none;
+}
+
+.comentarios-list {
+    margin-top: 10px;
+}
+
+.comentario {
+    font-size: 14px;
+    color: #262626;
+    margin-top: 5px;
+}
+
+/*paginacion*/
+
+#paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#paginacion button {
+    background-color: #4c7e57; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#paginacion button:hover {
+    background-color: #254d27; 
+}
+
+#paginacion button:disabled {
+    background-color: #ccc; /* Gris para botones deshabilitados */
+    cursor: not-allowed;
+}
+
+#pagina-info {
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -800px; /* Oculto inicialmente */
+    background-color: #333;
+    color: white;
+    transition: right 0.5s ease;
+    padding: 15px;
+    z-index: 1000; /* Para que esté por encima del contenido */
+}
+.sidebar.show {
+    right: 0; /* Cuando está visible */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.btn-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 15px; /* Espacio debajo del botón */
+    display: block; /* Para que ocupe toda la línea */
+}

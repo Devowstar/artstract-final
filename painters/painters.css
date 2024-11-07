@@ -1,0 +1,206 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+.section1 {
+    background-color: #ffffff;
+    border-bottom: 2px solid #3a1212;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex: auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #262626;
+}
+
+.logo{
+    justify-content: flex-start;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.main-content {
+    flex: 2;
+    padding: 20px;
+}
+.categoria{
+    text-align: center;
+    margin-bottom: -5px;
+}
+
+.home, .search, .foro, .categorias, .profile{
+    text-decoration: none;
+    color: #427752;
+    margin-right: 10px;
+    align-items: flex-end;
+    font-size: 21px;
+    
+    
+}
+.profile{
+    margin-right: 15px;
+}
+
+.categorias{
+font-size: 50px;
+}
+
+
+
+
+.artista{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #666666;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: 300px; /* Puedes ajustar el tamaño */
+    overflow: hidden;
+    transition: transform 0.2s;
+}
+.artista:hover {
+    transform: scale(1.02);
+}
+
+#artista {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+
+
+.artista p {
+    margin: 0 16px 16px;
+    font-size: 14px;
+    color: #587e5fc9;
+}
+
+.artista img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+.artista strong {
+    color: #3a1212;
+}
+
+.artista h2 {
+    font-size: 1.5rem;
+    margin: 16px;
+}
+
+
+#artista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.interacciones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px 16px;
+}
+
+
+.like-btn.liked {
+    color: #ff0000; /* Color rojo para indicar que está "liked" */
+}
+
+/*paginacion*/
+
+#paginacion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#paginacion button {
+    background-color: #4c7e57; 
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#paginacion button:hover {
+    background-color: #254d27; 
+}
+
+#paginacion button:disabled {
+    background-color: #ccc; /* Gris para botones deshabilitados */
+    cursor: not-allowed;
+}
+
+#pagina-info {
+    margin: 0 15px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/*sidebar*/
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -800px; /* Oculto inicialmente */
+    background-color: #333;
+    color: white;
+    transition: right 0.5s ease;
+    padding: 15px;
+    z-index: 1000; /* Para que esté por encima del contenido */
+}
+.sidebar.show {
+    right: 0; /* Cuando está visible */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+.btn-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 15px; /* Espacio debajo del botón */
+    display: block; /* Para que ocupe toda la línea */
+}

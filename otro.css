@@ -1,0 +1,68 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header img {
+    width: 150px; /* Ancho de la imagen de perfil */
+    height: 150px; /* Alto de la imagen de perfil */
+    border: 5px solid white; /* Borde blanco alrededor de la imagen */
+    margin-bottom: 15px; /* Espacio debajo de la imagen */
+}
+
+h1 {
+    font-size: 2.5rem; /* Tamaño de fuente para el nombre de usuario */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+p {
+    font-size: 1.2rem; /* Tamaño de fuente para la ubicación y biografía */
+}
+
+.container {
+    margin-top: 20px; /* Margen superior para la sección principal */
+}
+.list-group-item:hover {
+    background-color: #e2e6ea; /* Color de fondo al pasar el ratón */
+}
+
+.modal-header {
+    background-color: #198754; /* Color de fondo del encabezado del modal */
+    color: white; /* Color del texto en el encabezado del modal */
+}
+
+.btn-close {
+    filter: brightness(0) invert(1); /* Cambia el color de la "X" a blanco */
+}
+
+.modal-body {
+    padding: 20px; /* Espaciado interno del cuerpo del modal */
+}
+
+.btn-light:hover {
+    background-color: #e2e6ea; /* Color de fondo al pasar el ratón en botón claro */
+}
+
+
+
+input[type="file"] {
+    margin-bottom: 15px;
+  }
+  
+  
+  .friend-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  .friend-suggestion {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-primary {
+    transition: background-color 0.3s ease;
+  }
+  .btn-primary:hover {
+    background-color: #587c4f;
+  }

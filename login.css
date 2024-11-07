@@ -1,0 +1,56 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: system-ui;
+}
+
+body {
+    height: 100vh;
+    background-image: url("fondo32.png");
+}
+
+
+/*-----BOOSTSTRAP--------------------------------------------------------------------------------------------------------------------------------------------------*/
+.divider:after,
+.divider:before {
+content: "";
+flex: 1;
+height: 1px;
+background: #949494;
+}
+
+.inicio {
+
+    padding: 20px;
+
+    text-align: center;
+
+}
+
+.form-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.inicio-sesion {
+
+    padding: 12px;
+
+    margin: 0 10px;
+
+    max-width: 400px;
+
+    width: 100%;
+
+    border-radius: 8px;
+
+    box-shadow: 0 2px 10px rgb(15, 105, 3);
+
+}
+

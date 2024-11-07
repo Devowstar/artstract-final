@@ -1,0 +1,248 @@
+/* Fondo dinámico sin gradiente artístico */
+body {
+    background-color: #fafafa; /* Fondo sólido */
+    margin: 0; 
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.section1 {
+    background-color: #ffffff;
+    border-bottom: 2px solid #000000;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    flex: auto;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #427752; /* Color verde */
+}
+
+.logo {
+    justify-content: flex-start;
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+.main-content {
+    flex: 2;
+    padding: 20px;
+}
+
+.home, .search, .foro, .categorias, .profile {
+    text-decoration: none;
+    color: #427752; /* Color verde */
+    margin-right: 10px;
+    align-items: flex-end;
+    font-size: 21px;
+}
+
+.profile {
+    margin-right: 15px;
+}
+
+.categorias {
+    font-size: 50px;
+    color: #427752; /* Color verde */
+}
+
+.containerhome {
+    align-items: flex-end;
+}
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    right: -800px; /* Oculto inicialmente */
+    background-color: #333;
+    color: white;
+    transition: right 0.5s ease;
+    padding: 15px;
+    z-index: 1000; /* Para que esté por encima del contenido */
+}
+
+.sidebar.show {
+    right: 0; /* Cuando está visible */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 15px 0;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-close {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 15px; /* Espacio debajo del botón */
+    display: block; /* Para que ocupe toda la línea */
+}
+
+/* Título principal con estilo */
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    color:#427752; /* Color verde */
+    margin-bottom: 40px;
+}
+
+.modal-fade {
+    justify-content: flex-start;
+}
+
+/* Estilo de perfil */
+#user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    border: 3px solid#427752;/* Color verde */
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 50%;
+    margin-top: 20px;
+    padding: 20px;
+    margin-left: 23px;
+}
+
+#user-info:hover {
+    transform: scale(1.05);
+}
+
+#fotoPerfil {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin-right: 20px; 
+}
+
+#displayName {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color:#427752; /* Color verde */
+}
+
+.form-control{
+    width: 90%;
+}
+/* Textarea */
+textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    font-size: 1.2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    flex: none;
+    display: flex;
+    width: 50%;
+    margin-left: 23px;
+}
+
+textarea:hover {
+    background-color: #e0e0e0; /* Cambiado a un color neutro */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.075);
+}
+
+/* Botones */
+button {
+    background-color:#427752; /* Color verde */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+    margin-left: 23px;
+}
+
+button:hover {
+    background-color:#427752; /* Color verde más oscuro */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(-3px);
+}
+
+/* Título de publicaciones */
+h2 {
+    font-size: 2.5rem;
+    color: #427752;
+    text-align: left;
+    margin-top: 30px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom: 3px solid  #3a1212;  
+    padding-bottom: 10px;
+}
+
+/* Caja de publicaciones */
+#publicaciones {
+    margin-top: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo del modal */
+.modal-header, .modal-footer {
+    background-color: rgba(255, 255, 255, 0);
+
+    border-radius: 10px;
+}
+
+.modal-title {
+    color: #427752; /* Color verde */
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color:#427752; /* Color verde */
+    border-color: #427752;/* Color verde */
+}
+
+.btn-secondary {
+    background-color: #8d99ae;
+    border-color: #8d99ae;
+}
+
+.collage {
+    float: right;
+    border: 3px;
+    margin-right: 5%;
+    box-sizing: content-box;
+    margin: 0px 5%;
+    border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+    .collage {
+        display: none;
+    }
+}
